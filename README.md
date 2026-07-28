@@ -32,13 +32,10 @@ Production-style AI application for answering enterprise policy questions with r
 
 ### Backend
 
-1. Activate the virtual environment.
-2. Run the FastAPI app with Uvicorn.
+Run the FastAPI app from the project root directory using Python to run the module directly (this bypasses Windows Application Control blocking policies on `uvicorn.exe`):
 
 ```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-& .\venv\Scripts\Activate.ps1
-uvicorn backend.main:app --reload
+.\venv\Scripts\python.exe -m uvicorn backend.main:app --reload
 ```
 
 ### Frontend
